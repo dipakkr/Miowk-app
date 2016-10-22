@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Miowk App</string>
+    <string name="str_family">Family</string>
+
+    <string name="str_numbers">Numbers</string>
+    <string name="str_colors">Colors</string>
+    <string name="str_phrases">Phrases</string>
+
+    <string name="title_phrases">Phrases</string>
+    <string name="title_numbers">Numbers</string>
+    <string name="title_colors">Colors</string>
+    <string name="title_family">Family</string>
+
+
+
+</resources>

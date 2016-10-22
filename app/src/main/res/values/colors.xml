@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorNumber">#f186bc</color>
+    <color name="colorFamily">#7b86e3</color>
+    <color name="colorPhrases">#46ada7</color>
+    <color name="colorColors">#a16517</color>
+    <color name="primary_color">#4A312A</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color">#2F1D1A</color>
+
+
+
+    <color name="primary_color1">#3c6b4e</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color1">#1a2f22</color>
+
+
+    <color name="primary_color2">#2a394a</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color2">#4b6481</color>
+
+    <color name="primary_color3">#322847</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color3">#785fab</color>
+
+    <color name="category_family">#379237</color>
+
+    <color name="category_numbers">#c6ef894e</color>
+
+    <!-- Background color for the colors category -->
+    <color name="category_colors">#8800A0</color>
+
+    <!-- Background color for the phrases category -->
+    <color name="category_phrases">#16AFCA</color>
+
+
+
+    <color name="tan_background">#FFF7DA</color>
+</resources>
