@@ -1,16 +1,21 @@
 package com.dipakkr.github.miowkapp;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class FamilyActivity extends AppCompatActivity {
+public class FamilyActivity extends Fragment {
 
 
     private MediaPlayer mMediaPlayer;
@@ -60,10 +65,13 @@ public class FamilyActivity extends AppCompatActivity {
         }
     };
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootview = inflater.inflate(R.layout.activity_family,container,false);
+
+        mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
+
 
         final ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("father", "әpә", R.drawable.family_father, R.raw.family_father));
@@ -85,9 +93,9 @@ public class FamilyActivity extends AppCompatActivity {
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(this, words, R.color.category_family);
+        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_family);
 
-        ListView listView = (ListView) findViewById(R.id.list_family);
+        ListView listView = (ListView)rootview.findViewById(R.id.list_family);
 
         // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
@@ -115,7 +123,7 @@ public class FamilyActivity extends AppCompatActivity {
 
                     // Create and setup the {@link MediaPlayer} for the audio resource associated
                     // with the current word
-                    mMediaPlayer = MediaPlayer.create(FamilyActivity.this, word.getmAudioResourceId());
+                    mMediaPlayer = MediaPlayer.create(getActivity(), word.getmAudioResourceId());
 
                     // Start the audio file
                     mMediaPlayer.start();
@@ -126,10 +134,14 @@ public class FamilyActivity extends AppCompatActivity {
                 }
             }
         });
+
+        return rootview;
     }
 
+
+
     @Override
-    protected void onStop() {
+    public void onStop() {
         super.onStop();
         // When the activity is stopped, release the media player resources because we won't
         // be playing any more sounds.
