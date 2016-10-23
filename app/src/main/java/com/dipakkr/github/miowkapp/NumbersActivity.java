@@ -1,27 +1,26 @@
 package com.dipakkr.github.miowkapp;
 
 import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import java.util.ArrayList;
 
 public class NumbersActivity extends Fragment{
 
+    private MediaPlayer mMediaPlayer;
     private MediaPlayer.OnCompletionListener mCompletionListener =  new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaPlayer();
         }
     };
-
-    private MediaPlayer mMediaPlayer;
 
     @Nullable
     @Override
@@ -43,7 +42,7 @@ public class NumbersActivity extends Fragment{
         words.add(new Word("Nine", "Lutti", R.drawable.number_eight,R.raw.number_nine));
         words.add(new Word("Ten", "Lutti", R.drawable.number_nine,R.raw.number_ten));
 
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.colorPrimaryDark);
+        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_numbers);
 
         ListView numberslistview = (ListView) view.findViewById(R.id.listview);
 

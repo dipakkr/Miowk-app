@@ -1,16 +1,13 @@
 package com.dipakkr.github.miowkapp;
 
-import android.media.MediaActionSound;
 import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,15 +15,13 @@ import java.util.ArrayList;
 public class ColorsActivity extends Fragment {
 
 
-
+    private MediaPlayer mMediaPlayer;
     private MediaPlayer.OnCompletionListener mCompletionListener =  new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaplayer();
         }
     };
-
-    private MediaPlayer mMediaPlayer;
 
     @Nullable
     @Override
@@ -44,7 +39,8 @@ public class ColorsActivity extends Fragment {
         words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray, R.raw.color_gray));
         words.add(new Word("black", "kululli", R.drawable.color_black, R.raw.color_black));
         words.add(new Word("white", "kelelli", R.drawable.color_white, R.raw.color_white));
-        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.colorPrimary);
+
+        WordAdapter adapter = new WordAdapter(getActivity(), words, R.color.category_colors);
 
         ListView listViewcolor = (ListView) rootview.findViewById(R.id.list_color_view);
 

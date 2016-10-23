@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#3fb586</color>
+    <color name="colorPrimaryDark">#309f73</color>
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorNumber">#f186bc</color>
     <color name="colorFamily">#7b86e3</color>
     <color name="colorPhrases">#46ada7</color>
     <color name="colorColors">#a16517</color>
-    <color name="primary_color">#4A312A</color>
 
-    <!-- Primary dark color of the app (shown in the status bar) -->
-    <color name="primary_dark_color">#2F1D1A</color>
 
 
 
@@ -31,15 +28,15 @@
     <!-- Primary dark color of the app (shown in the status bar) -->
     <color name="primary_dark_color3">#785fab</color>
 
-    <color name="category_family">#379237</color>
+    <color name="category_family">#aa937b7b</color>
 
-    <color name="category_numbers">#c6ef894e</color>
+    <color name="category_numbers">#c6a87fd8</color>
 
     <!-- Background color for the colors category -->
-    <color name="category_colors">#8800A0</color>
+    <color name="category_colors">#e87ba6a4</color>
 
     <!-- Background color for the phrases category -->
-    <color name="category_phrases">#16AFCA</color>
+    <color name="category_phrases">#9bd6865d</color>
 
 
 

@@ -1,13 +1,9 @@
 package com.dipakkr.github.miowkapp;
 
-import android.content.Intent;
-import android.support.v4.media.RatingCompat;
-import android.support.v4.view.PagerAdapter;
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
 
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this, getSupportFragmentManager());
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
+
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 
